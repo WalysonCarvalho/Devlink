@@ -1,0 +1,157 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+    --text-color: white;
+    --bg-url:url(./assets/bg-mobile.jpg);
+    --stroke-color:rgba(255,255,255,0.5);
+    --surface-color:rgba(255,255,255,0.5);
+    --surface-color-hover:rgba(0,0,0,0.2);
+    --hightlight-color:rgba(255,255,255,0.2);
+    --switch-bg-url:url(./assets/MoonStars.svg);
+
+}
+body {
+background: var(--bg-url) no-repeat top center/cover;
+}
+/*corpo do proj*/
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+/*mudando para light*/
+.light{
+    --text-color: black;
+    --bg-url:url(./assets/bg-mobile-light.jpg);
+    --stroke-color:rgba(0,0,0,0.5);
+    --surface-color:rgba(0,0,0,0.5);
+    --surface-color-hover:rgba(0,0,0,0.2);
+    --hightlight-color:rgba(0,0,0,0.1);
+    --switch-bg-url:url(./assets/Sun.svg);
+}
+/*container*/
+#container {
+  width: 360px;
+  margin: auto;
+  padding-top: 56px;
+  padding: 0 24px;
+}
+#profile img {
+  width: 112px;
+  display: block;
+  margin: auto;
+  padding: 24px;
+  border-radius: 50%;
+}
+p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 5px;
+}
+/*SWITCH VAGABUND*/
+/* como eu não consegui calcular bem eu fiz por pixel*/
+.light #switch button {
+    transform: translate(2.5rem, -50%);
+    left: initial;
+}
+
+#switch button{
+width: 32px;
+height: 32px;
+background: white var(--switch-bg-url) no-repeat center ;
+border: 0px;
+border-radius: 50px;
+position: absolute;
+top:50%;
+left:0;
+z-index: 1;
+transform:translateY(-50%);
+transition: all .3s ease;
+cursor: pointer;
+}
+
+.container-switch{
+    position: relative;
+    max-width: 64px;
+    height: 24px;
+    margin: 20px auto;
+}
+
+#switch-tracker{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background:var(--surface-color) ;
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+    
+    
+    
+
+ 
+
+}
+ /*LISTAS &  LINKS*/
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+} 
+
+ul li a {
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: backgorund 0.5s;
+    
+}
+
+/*pseudo selector*/
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+
+}
+/*links sociais*/
+
+#social-links{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0px;
+    font-size: 24px;
+}
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.3s;
+    border-radius: 50%;
+
+}
+
+#social-links a:hover{
+    background:var(--hightlight-color);
+    border-radius: 50%;
+
+}
+
+footer {
+    padding: 24px 0px;
+    text-align: center;
+    font-size: 14px;
+}
